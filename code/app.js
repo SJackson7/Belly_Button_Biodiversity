@@ -1,4 +1,4 @@
-const data = '../data/samples.json';
+const data = './code/data/samples.json';
 let id_select = d3.select('#selDataset');
 let meta_panel = d3.select('#sample-metadata');
 
@@ -112,18 +112,18 @@ function gaugechart(selected_id) {
         var results_array = data.metadata.filter(object => object.id.toString() == selected_id)[0];
         var wfreq = results_array.wfreq;
         console.log(wfreq);
-        data = getData(wfreq);
+        wdata = getData(wfreq);
     
       function getData(wfreq) {
-        var data = [],
+        var wdata = [],
           start = Math.round(Math.floor(wfreq / 10) * 10);
-        data.push(wfreq);
+        wdata.push(wfreq);
         for (i = start; i > 0; i -= 10) {
-          data.push({
+          wdata.push({
             y: i
           });
         }
-        return data;
+        return wdata;
       }
     
       Highcharts.chart('gauge', {
@@ -214,7 +214,7 @@ function gaugechart(selected_id) {
           color: Highcharts.getOptions().colors[0],
           radius: '100%',
           innerRadius: '80%',
-          data: data
+          data: wdata
         }]
       });
     });
