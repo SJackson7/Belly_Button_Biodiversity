@@ -1,4 +1,4 @@
-const data = '../data/samples.json';
+const data = '/data/samples.json';
 let id_select = d3.select('#selDataset');
 let meta_panel = d3.select('#sample-metadata');
 
