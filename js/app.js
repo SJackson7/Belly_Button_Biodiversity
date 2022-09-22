@@ -114,7 +114,7 @@ function gaugechart(selected_id) {
         console.log(wfreq);
         data = getData(wfreq);
     
-      function getData(rawData) {
+      function getData(wfreq) {
         var data = [],
           start = Math.round(Math.floor(wfreq / 10) * 10);
         data.push(wfreq);
