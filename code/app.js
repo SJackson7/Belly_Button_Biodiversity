@@ -129,7 +129,7 @@ function gaugechart(selected_id) {
       Highcharts.chart('gauge', {
         chart: {
           type: 'solidgauge',
-          marginTop: 48
+          marginTop: 24,
         },
         
         title: {
@@ -159,12 +159,12 @@ function gaugechart(selected_id) {
             borderWidth: 0,
             shape: 'arc'
           }],
-          size: '120%',
+          size: '100%',
           center: ['50%', '65%']
         }, {
           startAngle: -120,
           endAngle: 120,
-          size: '95%',
+          size: '80%',
           center: ['50%', '65%'],
           background: []
         }],
@@ -206,7 +206,7 @@ function gaugechart(selected_id) {
         }],
         
         series: [{
-          animation: false,
+          animation: true,
           dataLabels: {
             enabled: false
           },
