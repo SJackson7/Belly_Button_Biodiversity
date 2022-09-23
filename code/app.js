@@ -139,9 +139,9 @@ function gaugechart(selected_id) {
         subtitle: {
           text: wfreq,
           style: {
-            'font-size': '60px'
+            'font-size': '120px'
           },
-          y: 200,
+          y: 250,
           zIndex: 7
         },
     
